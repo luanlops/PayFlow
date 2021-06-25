@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "642128113679",
+    "project_id": "payflow-rocket-d1203",
+    "storage_bucket": "payflow-rocket-d1203.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642128113679:android:8b4bc60725f2aad3b7f37a",
+        "android_client_info": {
+          "package_name": "com.example.payflow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642128113679-0kuinip801g59mcgv5krhitk4quqbo3g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.payflow",
+            "certificate_hash": "4d1abeb53ea44220d7cf9de11110204f6d244819"
+          }
+        },
+        {
+          "client_id": "642128113679-rgjqla3m4e7f9udhuaepr4kj85jvjus8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS0kwJRwF5JhIAjI6DGsPoI7J7_i4mmUQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "642128113679-rgjqla3m4e7f9udhuaepr4kj85jvjus8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
