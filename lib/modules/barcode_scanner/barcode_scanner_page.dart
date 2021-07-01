@@ -21,7 +21,11 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
     controller.getAvailableCameras();
     controller.statusNotifier.addListener(() {
       if (controller.status.hasBarcode) {
-        Navigator.pushReplacementNamed(context, "/insert_boleto");
+        Navigator.pushReplacementNamed(
+          context,
+          "/insert_boleto",
+          arguments: controller.status.barcode,
+        );
       }
     });
 
@@ -91,12 +95,15 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
                   ],
                 ),
                 bottomNavigationBar: SetLabelButtons(
-                  labelPrimary: "Inserir código do boleto",
-                  onTapPrimary: () {
-                    controller.status = BarcodeScannerStatus.error("Error");
+                  primaryLabel: "Inserir código do boleto",
+                  primaryOneTap: () {
+                    Navigator.pushReplacementNamed(
+                      context,
+                      "/insert_boleto",
+                    );
                   },
-                  labelSecondary: "Adicionar da galeria",
-                  onTapSecondary: controller.scanWithImagePicker,
+                  secondaryLabel: "Adicionar da galeria",
+                  secondaryOneTap: controller.scanWithImagePicker,
                 )),
           ),
           ValueListenableBuilder<BarcodeScannerStatus>(
@@ -111,7 +118,10 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
                           controller.scanWithCamera();
                         },
                         labelSecondary: "Digitar código",
-                        onTapSecondary: () {},
+                        onTapSecondary: () {
+                          Navigator.pushReplacementNamed(
+                              context, "/insert_boleto");
+                        },
                         title:
                             "Não foi possível identificar um código de barras.",
                         subtitle:
